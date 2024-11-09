@@ -1,0 +1,35 @@
+ .botChatContainer {
+    background-color: #e4f1fe;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    margin-left: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+ }
+
+ .userChat{
+    width: 40%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+ }
+
+ .userChatContainer {
+    background-color: #8dc6ff;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-basis: 95%;
+ }
+
+ .undoIcon {
+    cursor: pointer;
+ }
+
+

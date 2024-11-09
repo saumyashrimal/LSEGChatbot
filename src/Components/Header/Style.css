@@ -1,0 +1,20 @@
+.header {
+    background: #22313f;
+    color: white;
+    padding: 2px;
+}
+
+.headerItems{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.printIcon {
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
