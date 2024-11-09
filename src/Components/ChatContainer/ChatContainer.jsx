@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Stocks } from "../../data";
 import { getSelectOptions } from "../../Utilities/helpers";
-import Select from "../../Select/Select";
+import Select from "../Select/Select";
 import { headings, welcomeMessage, endChatMessage } from "../../Constants";
 import Chat from "./Chat";
 
