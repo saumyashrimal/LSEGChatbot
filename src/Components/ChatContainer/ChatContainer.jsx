@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Stocks } from "../../data";
 import { getSelectOptions } from "../../Utilities/helpers";
 import Select from "../Select/Select";
@@ -29,7 +29,7 @@ export default function ChatContainer() {
     if(chatState === 3){
       if(value === 'endChat') {
         setChatChain((prev) => [...prev, { isBot: true, isChat: true, text: endChatMessage, chatState: chatState+1}])
-      } else if(value == 'backToMenu'){
+      } else if(value === 'backToMenu'){
         window.location.reload();
       }
       return
@@ -44,13 +44,13 @@ export default function ChatContainer() {
     <>
       {chatChain.map((chat) => (
         <>
-          {chat.isChat && <Chat text={chat.text} isBot={chat.isBot} undoClick={handleUndoClick} disabled={!(chatState == chat.chatState)} />}
+          {chat.isChat && <Chat text={chat.text} isBot={chat.isBot} undoClick={handleUndoClick} disabled={!(chatState === chat.chatState)} />}
           {!chat.isChat && (
             <Select
               label={chat.label}
               options={chat.options}
               onSelect={handleSelect}
-              disabled={!(chatState == chat.chatState)}
+              disabled={!(chatState === chat.chatState)}
             />
           )}
         </>
